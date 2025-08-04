@@ -11,3 +11,19 @@ public class CamelSpringBootIntegrationDemoApplication {
     }
 
 }
+
+// VETRO
+// transport protocol
+// message format
+// persistent store
+// target system
+// 1. It is validated
+// 2. It is enriched
+// 3. Transformed to desire format
+// 4. Act upon
+// Validate
+// Enrich
+// Transform
+// Route
+// Operate
+

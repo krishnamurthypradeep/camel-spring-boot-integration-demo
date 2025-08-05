@@ -5,7 +5,7 @@ import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.model.dataformat.JaxbDataFormat;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class FileToActiveMQUsingJAXB extends RouteBuilder {
     @Override
     public void configure() throws Exception {

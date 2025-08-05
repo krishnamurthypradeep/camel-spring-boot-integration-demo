@@ -6,6 +6,9 @@ import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.myapp.camel.avro.Order;
 import org.apache.activemq.ActiveMQConnectionFactory;
 import org.apache.camel.component.jackson.JacksonDataFormat;
+
+
+import org.apache.camel.dataformat.avro.AvroDataFormat;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -26,6 +29,11 @@ public class AppConfig {
         JacksonDataFormat format = new JacksonDataFormat(Order.class);
         format.setObjectMapper(mapper);
         return format;
+    }
+
+    @Bean("avroOrderDataFormat")
+    public AvroDataFormat avroOrderDataFormat() {
+        return new AvroDataFormat(Order.SCHEMA$);
     }
 
 }

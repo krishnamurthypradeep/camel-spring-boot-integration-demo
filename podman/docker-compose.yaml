@@ -1,0 +1,39 @@
+services:
+
+  rabbitmq:
+    image: rabbitmq:management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+  mysql:
+    image: mysql:8
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: test
+    ports:
+      - "3306:3306"
+  activemq:
+    image: symptoma/activemq:latest
+    hostname: "0.0.0.0"
+    ports:
+      - "61616:61616"
+      - "8161:8161"
+    volumes:
+      - ./jetty.xml:/opt/apache-activemq/conf/jetty.xml
+
+
+  postgres:
+    image: postgres:15
+    container_name: postgres
+    user: "0"
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: camel_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+volumes:
+  pgdata:

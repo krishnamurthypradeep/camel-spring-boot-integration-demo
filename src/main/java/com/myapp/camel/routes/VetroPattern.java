@@ -5,6 +5,12 @@ import org.apache.camel.builder.RouteBuilder;
 import org.springframework.stereotype.Component;
 
 @Component
+
+// ActiveMQ
+// RabbitMQ
+// IBM MQ
+
+// Apache Kafka
 public class VetroPattern extends RouteBuilder {
     @Override
     public void configure() throws Exception {

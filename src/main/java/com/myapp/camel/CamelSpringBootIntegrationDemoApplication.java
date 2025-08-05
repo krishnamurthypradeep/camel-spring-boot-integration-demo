@@ -12,6 +12,12 @@ public class CamelSpringBootIntegrationDemoApplication {
 
 }
 
+// data Conversion
+// xml -> map to objects
+// json -> objects to json
+// activemq -> send the messages to activemq as json
+// file to activemq
+// JAXB
 // VETRO
 // transport protocol
 // message format

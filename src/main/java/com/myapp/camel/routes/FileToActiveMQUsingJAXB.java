@@ -17,7 +17,7 @@ public class FileToActiveMQUsingJAXB extends RouteBuilder {
                 .unmarshal(jaxbDataFormat)
                 .marshal().json()
                 .log(" contents:\n ${bodyAs(String)}").
-                to("activemq:queue:products");
+                to("jms:queue:products");
         // ActiveMQ Component
         // JMS producer
     }

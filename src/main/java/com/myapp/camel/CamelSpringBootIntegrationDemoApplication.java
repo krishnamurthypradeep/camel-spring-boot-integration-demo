@@ -17,6 +17,21 @@ public class CamelSpringBootIntegrationDemoApplication {
 // json -> objects to json
 // activemq -> send the messages to activemq as json
 // file to activemq
+
+
+// Message Broker Kafka
+
+// XML | JSON
+// AVRO  data serialization format
+// efficient storage
+// big data , event streaming (kafka)
+// Schema Based
+// Compact
+// Binary
+// Polyglot
+//
+
+
 // JAXB
 // VETRO
 // transport protocol

@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class AppConfig {
 
-    @Bean("activeMQ")
+    @Bean("activemq")
     ActiveMQConnectionFactory connectionFactory (){
      return new ActiveMQConnectionFactory("tcp://localhost:61616");
     }

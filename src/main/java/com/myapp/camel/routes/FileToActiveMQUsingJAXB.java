@@ -15,7 +15,8 @@ public class FileToActiveMQUsingJAXB extends RouteBuilder {
 
         from("file:data/xml?include=products-.*.xml&noop=true&autoCreate=false&directoryMustExist=true")
                 .unmarshal(jaxbDataFormat)
-                .marshal().json().
+                .marshal().json()
+                .log(" contents:\n ${bodyAs(String)}").
                 to("activemq:queue:products");
         // ActiveMQ Component
         // JMS producer

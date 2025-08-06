@@ -12,6 +12,8 @@ import org.apache.camel.dataformat.avro.AvroDataFormat;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import java.util.Map;
+
 @Configuration
 public class AppConfig {
 
@@ -19,7 +21,6 @@ public class AppConfig {
     ActiveMQConnectionFactory connectionFactory (){
      return new ActiveMQConnectionFactory("tcp://localhost:61616");
     }
-
     @Bean
     public JacksonDataFormat jacksonDataFormatForOrder() {
         ObjectMapper mapper = new ObjectMapper();
@@ -31,9 +32,25 @@ public class AppConfig {
         return format;
     }
 
-    @Bean("avroOrderDataFormat")
-    public AvroDataFormat avroOrderDataFormat() {
-        return new AvroDataFormat(Order.SCHEMA$);
-    }
+//    @Bean
+//    public JacksonDataFormat jacksonDataFormatForOrder() {
+////        ObjectMapper mapper = new ObjectMapper();
+////        mapper.registerModule(new JavaTimeModule());
+////        mapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
+//
+//        JacksonDataFormat format = new JacksonDataFormat(Map.class);
+//        //format.setObjectMapper(mapper);
+//        return format;
+//    }
 
+//    @Bean("avroOrderDataFormat")
+//    public AvroDataFormat avroOrderDataFormat() {
+//        return new AvroDataFormat(Order.SCHEMA$);
+//    }
+
+//    @Bean("avroOrderDataFormat")
+//    public AvroDataFormat avroDataFormat() {
+//        AvroDataFormat format = new AvroDataFormat(Order.SCHEMA$);
+//        return format;
+//    }
 }

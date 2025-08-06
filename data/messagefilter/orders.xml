@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<orders>
+    <lineItems>
+        <product>
+            <name>Iphone16Pro</name>
+            <type>HighPriority</type>
+            <price>85000.5</price>
+            <brand>Apple</brand>
+            <description>Iphone16Pro</description>
+        </product>
+        <product>
+            <name>IpadPro</name>
+            <type>LowPriority</type>
+            <price>85000.5</price>
+            <brand>Apple</brand>
+            <description>IpadPro</description>
+        </product>
+    </lineItems>
+</orders>

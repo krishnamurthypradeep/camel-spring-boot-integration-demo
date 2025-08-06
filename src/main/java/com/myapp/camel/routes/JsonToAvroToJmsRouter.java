@@ -12,9 +12,9 @@ import org.springframework.stereotype.Component;
 
 import java.util.Map;
 
-@Component
+//@Component
 public class JsonToAvroToJmsRouter extends RouteBuilder {
-    @Autowired
+    //@Autowired
     private JacksonDataFormat jacksonDataFormatForOrder;
 
     @Override
@@ -31,9 +31,9 @@ public class JsonToAvroToJmsRouter extends RouteBuilder {
                 .marshal(avroDataFormat)
                 .to("activemq:queue:orderavro");
 
-        from("activemq:queue:orderavro")
-                .unmarshal(avroDataFormat) // Convert Avro binary to Java object
-                .log("✅ Received Order: ${body}");
+//        from("activemq:queue:orderavro")
+//                .unmarshal(avroDataFormat) // Convert Avro binary to Java object
+//                .log("✅ Received Order: ${body}");
 
     }
 }
@@ -48,6 +48,12 @@ public class JsonToAvroToJmsRouter extends RouteBuilder {
 // bytes
 // string
 
+
+// Content Based Router
+// Message  Filter
+// Multicast
+// Recipient List
+// Wire Tap
 
 // record
 // enum

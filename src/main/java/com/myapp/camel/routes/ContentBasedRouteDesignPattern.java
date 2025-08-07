@@ -14,12 +14,14 @@ public class ContentBasedRouteDesignPattern extends RouteBuilder {
                 .log("File ${header:CamelFileName}")
                 .choice()
                 .when(header("fileType").isEqualTo("xml"))
-                .to("activemq:queue:xmlproducts")
+                //.to("activemq:queue:xmlproducts")
                 .when(header("fileType").isEqualTo("json"))
-                .to("activemq:queue:jsonproducts")
+                //.to("activemq:queue:jsonproducts")
                 .otherwise()
-                .to("activemq:queue:otherproducts")
+                //.to("activemq:queue:otherproducts")
+                .toD("activemq:queue:${header.fileType}")
                 .end();
+
     }
 }
 // CBR (choice /when/otherwise)

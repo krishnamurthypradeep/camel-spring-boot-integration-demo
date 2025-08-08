@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 
-@Component
+//@Component
 public class RecipientListPattern  extends RouteBuilder {
 
     public void configure() throws Exception {

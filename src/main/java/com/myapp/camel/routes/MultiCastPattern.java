@@ -3,7 +3,7 @@ package com.myapp.camel.routes;
 import org.apache.camel.builder.RouteBuilder;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class MultiCastPattern extends RouteBuilder {
     public void configure() throws Exception {
         from("activemq:queue:orders?concurrentConsumers=10")
@@ -32,3 +32,11 @@ public class MultiCastPattern extends RouteBuilder {
 // CBR
 // Message Filter
 // MultiCasting
+
+// Aggregator
+// Splitter
+
+// RoutingSlip
+
+
+// Load Balancer

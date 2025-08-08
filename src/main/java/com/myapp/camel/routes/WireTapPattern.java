@@ -3,7 +3,7 @@ package com.myapp.camel.routes;
 import org.apache.camel.builder.RouteBuilder;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class WireTapPattern extends RouteBuilder {
     public void configure() throws Exception {
         from("activemq:queue:orders")

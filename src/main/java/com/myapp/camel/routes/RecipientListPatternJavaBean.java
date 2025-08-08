@@ -4,7 +4,7 @@ import com.myapp.camel.bean.OrderProcessingBean;
 import org.apache.camel.builder.RouteBuilder;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class RecipientListPatternJavaBean extends RouteBuilder {
 
     public void configure() throws Exception {

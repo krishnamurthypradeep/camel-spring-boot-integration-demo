@@ -20,3 +20,11 @@ public class MessageFilterPattern extends RouteBuilder {
 // CBR
 // Message Filter
 // MultiCasting
+
+// Aggregating
+// 1. Correlation Identifier : Expression Which Incoming messages
+// 2. Completion Condition :  Predicate
+// 3. Aggregation Strategy : Strategy on how to combine these messages
+// 4. Order1, Order2, Order3 -> [Order1,Order2,Order3]
+
+
